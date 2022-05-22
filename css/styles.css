@@ -4,31 +4,35 @@ font-family: 'Roboto', sans-serif; */
 :root {
   --primary-color-text: #212121;
   --secondary-color-text: #757575;
-  --dditional-color-text: #ffffff;
+  --additional-color-text: #ffffff;
+  --hero-title-color: #ffffff;
   --logo-color: #000000;
   --accent-color: #2196f3;
   --hover-button: #188ce8;
+  --main-bgc-color: #ffffff;
+  --additional-bgc-color: #f5f4fa;
   --button-bgc: #f5f4fa;
   --footer-bgc: #2f303a;
-  --header-bgc: #ffffff;
+  --hero-bgc: #2f303a;
 }
-/* body */
+/* BODY */
 body {
   font-family: 'Roboto', sans-serif;
   font-size: 14px;
   letter-spacing: 0.3em;
+
   color: var(--primary-color-text);
-  background-color: var(--header-bgc);
+  background-color: var(--main-bgc-color);
 }
-/* header */
-.header {
-  background-color: var(--header-bgc);
+
+.hero {
+  background-color: var(--main-bgc-color);
 }
 
 .logo,
 .logo-footer {
-  color: var(--logo-color);
   font-family: 'Raleway', sans-serif;
+  color: var(--logo-color);
 }
 
 .logo-part,
@@ -47,21 +51,21 @@ body {
   text-decoration: none;
 }
 
-.nav-item-a,
-.contacts-item-a {
-  color: var(--primary-color-text);
+.nav-item-link,
+.contacts-item-link {
   font-weight: 500;
-  font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
   text-decoration: none;
+
+  color: var(--primary-color-text);
 }
 
-.nav-item-a.current {
+.nav-item-link.current {
   color: var(--accent-color);
 }
 
-.contacts-item-a {
+.contacts-item-link {
   color: var(--secondary-color-text);
 }
 
@@ -71,25 +75,22 @@ body {
   list-style: none;
 }
 
-/* index.html-main */
-.banner {
-  background-color: var(--footer-bgc);
+/* INDEX.HTML */
+.hero {
+  background-color: var(--hero-bgc);
 }
 
-.header-main {
-  color: var(--dditional-color-text);
+.hero-title {
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
   text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
+  color: var(--hero-title-color);
 }
 
-.header-button {
-  background-color: var(--accent-color);
-  color: var(--dditional-color-text);
-  border-color: var(--accent-color);
+.hero-button {
   font-family: inherit;
   font-weight: 700;
   font-size: 16px;
@@ -99,16 +100,19 @@ body {
   text-align: center;
   letter-spacing: 0.06em;
   cursor: pointer;
+
+  background-color: var(--accent-color);
+  color: var(--additional-color-text);
+  border-color: var(--accent-color);
 }
 
-.header-button:hover,
-.header-button:focus {
+.hero-button:hover,
+.hero-button:focus {
   background-color: var(--hover-button);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
-.header-second,
-.works-title {
+.header-second {
   font-weight: 700;
   font-size: 36px;
   line-height: 1.17;
@@ -116,21 +120,7 @@ body {
   letter-spacing: 0.03em;
 }
 
-.works-title {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-
-  white-space: nowrap;
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
-}
-
-.header-second.benefits {
+.header-second.benefits-title {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -160,15 +150,16 @@ body {
 }
 
 .benefits-description {
-  color: var(--secondary-color-text);
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
+  color: var(--secondary-color-text);
 }
 
 .team {
-  background-color: var(--button-bgc);
+  background-color: var(--additional-bgc-color);
 }
+
 .team-list-name {
   font-weight: 500;
   font-size: 16px;
@@ -180,6 +171,7 @@ body {
 .team-list-item {
   background-color: var(--header-bgc);
 }
+
 .team-list-post {
   color: var(--secondary-color-text);
   font-size: 16px;
@@ -188,7 +180,7 @@ body {
   letter-spacing: 0.03em;
 }
 
-/* portfolio.html-main*/
+/* PORTFOLIO.HTML */
 
 .buttons {
   list-style: none;
@@ -196,24 +188,24 @@ body {
 
 .button {
   font-family: inherit;
-  background-color: var(--button-bgc);
-  border-color: var(--button-bgc);
   font-weight: 500;
   font-size: 16px;
   line-height: 1.62;
   text-align: center;
   letter-spacing: 0.03em;
+  background-color: var(--button-bgc);
+  border-color: var(--button-bgc);
 }
 
 .button:hover,
 .button:focus {
-  color: var(--dditional-color-text);
+  color: var(--additional-color-text);
   background-color: var(--hover-button);
 }
 
 .button:active,
 .button.current {
-  color: var(--dditional-color-text);
+  color: var(--additional-color-text);
   background-color: var(--accent-color);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
@@ -233,30 +225,30 @@ body {
   letter-spacing: 0.03em;
 }
 
-/* footer */
+/* FOOTER */
 .footer {
   background-color: var(--footer-bgc);
 }
 
 .logo-footer {
-  color: var(--dditional-color-text);
+  color: var(--additional-color-text);
 }
 
-.address-item-a {
-  color: var(--dditional-color-text);
+.address-item-link {
   font-style: normal;
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
   text-decoration: none;
+  color: var(--additional-color-text);
 }
 
-.nav-item-a:hover,
-.nav-item-a:focus,
-.contacts-item-a:hover,
-.contacts-item-a:focus,
-.address-item-a:hover,
-.address-item-a:focus {
+.nav-item-link:hover,
+.nav-item-link:focus,
+.contacts-item-link:hover,
+.contacts-item-link:focus,
+.address-item-link:hover,
+.address-item-link:focus {
   color: var(--accent-color);
 }
 
